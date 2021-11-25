@@ -12,10 +12,10 @@ RETOUR:
 	// Sinon
 	//fmt.Println("Vous avez choisis la lettre", i, "Mauvais choix")
 
-	if i > rune(91) || i < rune(64) {
-		fmt.Println("Désolé, lette indisponnible")
+	if i > rune('Z') || i < rune('A') {
+		fmt.Println("Désolé, lettre indisponnible")
 		goto RETOUR
-	} else {
+	} else if i < rune('Z') || i > rune('A') {
 		fmt.Println("Vous avez choisis la lettre", string(i), "Bon choix")
 	}
 
