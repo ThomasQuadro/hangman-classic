@@ -1,13 +1,10 @@
 package main
 
-import "fmt"
-
-func verifyIsLetter() {
+func verifyIsLetter() bool {
 	var l = []rune(letter)
 	if l[0] <= rune('Z') && l[0] >= rune('A') && len(l) == 1 {
-		fmt.Println("Vous avez choisis la lettre", string(l[0]))
+		return true
 	} else {
-		fmt.Println("Désolé, lettre indisponible")
-		interaction()
+		return false
 	}
 }
