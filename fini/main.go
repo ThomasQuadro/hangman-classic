@@ -4,7 +4,9 @@ func main() {
 	mothasard()
 	mr = []rune(mot)
 	crypto()
-	interaction()
+	for error != 0 {
+		interaction()
+	}
 }
 
 //------------------------------------------------------------------
