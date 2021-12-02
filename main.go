@@ -2,25 +2,23 @@ package main
 
 import "fmt"
 
-var letter = "I"
-var l = []rune(letter)
+var letter string
+
+func interaction() {
+	fmt.Println("Entrez une Lettre")
+	fmt.Scanf("%s", &letter)
+	verifyIsLetter()
+}
 
 func verifyIsLetter() {
-
-	var i rune
-RETOUR:
-	fmt.Println("Entrez une Lettre")
-	fmt.Scan(&i)
-	if i > rune('Z') || i < rune('A') || i > rune('z') || i < rune('a') {
-		fmt.Println("Désolé, lettre indisponnible")
-		goto RETOUR
-
+	var l = []rune(letter)
+	if l[0] <= rune('Z') && l[0] >= rune('A') && len(l) == 1 {
+		fmt.Println("Vous avez choisis la lettre", string(l[0]), "Bon choix")
 	} else {
-		fmt.Println("Vous avez choisis la lettre", string(i), "Bon choix")
+		fmt.Println("Désolé, lettre indisponible")
 	}
 }
 
 func main() {
-	fmt.Println(l)
-	// fmt.Println(verifyIsLetter())
+	interaction()
 }
