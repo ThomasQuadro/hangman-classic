@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 //fonction qui compte les erreurs
 func verifgoodletter() string {
 	var r = []rune(letter)
@@ -14,6 +16,7 @@ func verifgoodletter() string {
 	}
 	if c < 1 {
 		error--
+		fmt.Println("Oh non ! Il vous reste ", error, "tentatives d'erreurs")
 	} else {
 		error += 0
 	}

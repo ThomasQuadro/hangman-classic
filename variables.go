@@ -8,3 +8,4 @@ var mr []rune
 
 //var erreur
 var error int = 10
+var letterenter []rune

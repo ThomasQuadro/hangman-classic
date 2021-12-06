@@ -1,12 +1,13 @@
 package main
 
+import "fmt"
+
 func main() {
 	mothasard()
 	mr = []rune(mot)
 	crypto()
-	for error != 0 {
-		interaction()
-	}
+	fmt.Println(affichage())
+	interaction()
 }
 
 //------------------------------------------------------------------
